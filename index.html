@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Savory Table — Breakfast, Lunch &amp; Dinner</title>
+  <meta name="description" content="Savory Table serves breakfast, lunch and dinner, with online table reservations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark">🍽️</span>
+        <span class="brand-name">Savory <em>Table</em></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#reservation" class="btn btn-outline nav-cta">Reserve a Table</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="hero-eyebrow">Welcome to Savory Table</p>
+      <h1>Breakfast, Lunch &amp; Dinner — <span>Crafted with Love</span></h1>
+      <p class="hero-text">
+        From sunrise pancakes to candlelit dinners, every plate is made fresh with seasonal,
+        locally-sourced ingredients. Reserve your table and taste the difference.
+      </p>
+      <div class="hero-actions">
+        <a href="#reservation" class="btn btn-primary">Book a Table</a>
+        <a href="#menu" class="btn btn-ghost">View Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES (BREAKFAST / LUNCH / DINNER) ============ -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">All-Day Dining</p>
+        <h2>Three Ways to Savor</h2>
+        <p class="section-sub">Open from morning coffee to late-night desserts.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon">🥞</div>
+          <h3>Breakfast</h3>
+          <p class="service-time">7:00 AM – 11:00 AM</p>
+          <p>Fluffy pancakes, farm-fresh eggs, artisan pastries, and freshly brewed coffee to start your day right.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🥗</div>
+          <h3>Lunch</h3>
+          <p class="service-time">11:30 AM – 3:00 PM</p>
+          <p>Hearty salads, gourmet sandwiches, seasonal soups, and chef's specials for a satisfying midday break.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🍽️</div>
+          <h3>Dinner</h3>
+          <p class="service-time">5:00 PM – 10:30 PM</p>
+          <p>An elegant evening menu with grilled entrées, fresh seafood, and indulgent desserts under soft light.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+<!-- ============ MENU ============ -->
+  <section class="section menu" id="menu">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Our Menu</p>
+        <h2>Fresh From the Kitchen</h2>
+        <p class="section-sub">Choose a menu to explore our signature dishes.</p>
+      </div>
+
+      <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+        <button class="menu-tab active" data-menu="breakfast" role="tab" aria-selected="true">🥞 Breakfast</button>
+        <button class="menu-tab" data-menu="lunch" role="tab" aria-selected="false">🥗 Lunch</button>
+        <button class="menu-tab" data-menu="dinner" role="tab" aria-selected="false">🍽️ Dinner</button>
+      </div>
+
+      <div class="menu-panel" id="menuPanel"></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-media">
+        <div class="about-img"></div>
+      </div>
+      <div class="about-text">
+        <p class="section-eyebrow">Our Story</p>
+        <h2>A Passion for Good Food</h2>
+        <p>
+          Founded in 2012, Savory Table began as a small family kitchen with a simple belief:
+          great food brings people together. Today we serve breakfast, lunch, and dinner —
+          every dish prepared from scratch with ingredients sourced from local farms and markets.
+        </p>
+        <ul class="about-list">
+          <li>✔ Locally-sourced, seasonal ingredients</li>
+          <li>✔ Fresh-baked bread &amp; pastries daily</li>
+          <li>✔ Vegetarian, vegan &amp; gluten-free options</li>
+          <li>✔ Warm, welcoming atmosphere for every occasion</li>
+        </ul>
+        <a href="#reservation" class="btn btn-primary">Reserve Your Experience</a>
+      </div>
+    </div>
+  </section>
+<!-- ============ RESERVATION ============ -->
+  <section class="section reservation" id="reservation">
+    <div class="container">
+      <div class="section-head light">
+        <p class="section-eyebrow">Table Reservation</p>
+        <h2>Book Your Table</h2>
+        <p class="section-sub">Reserve in seconds — we'll have your table ready when you arrive.</p>
+      </div>
+
+      <div class="reservation-card">
+        <form id="reservationForm" novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+              <span class="error-msg" id="nameError"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              <span class="error-msg" id="emailError"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required />
+              <span class="error-msg" id="phoneError"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="guests">Number of Guests *</label>
+              <select id="guests" name="guests" required>
+                <option value="">Select guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+                <option value="9">9 Guests</option>
+                <option value="10+">10+ Guests (Event)</option>
+              </select>
+              <span class="error-msg" id="guestsError"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="date">Date *</label>
+              <input type="date" id="date" name="date" required />
+              <span class="error-msg" id="dateError"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="time">Time *</label>
+              <input type="time" id="time" name="time" required />
+              <span class="error-msg" id="timeError"></span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="meal">Preferred Meal</label>
+            <div class="meal-options" id="mealOptions">
+              <label class="meal-chip">
+                <input type="radio" name="meal" value="Breakfast" /> Breakfast
+              </label>
+              <label class="meal-chip">
+                <input type="radio" name="meal" value="Lunch" /> Lunch
+              </label>
+              <label class="meal-chip">
+                <input type="radio" name="meal" value="Dinner" checked /> Dinner
+              </label>
+              <label class="meal-chip">
+                <input type="radio" name="meal" value="No preference" /> No preference
+              </label>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="requests">Special Requests (optional)</label>
+            <textarea id="requests" name="requests" rows="4" placeholder="Birthday celebration, allergies, wheelchair access, window seat..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Confirm Reservation</button>
+          <p class="form-note">We'll hold your table for 15 minutes past your reserved time.</p>
+        </form>
+
+        <div class="reservation-success" id="reservationSuccess" hidden>
+          <div class="success-icon">✅</div>
+          <h3>Reservation Confirmed!</h3>
+          <p id="successMessage"></p>
+          <button class="btn btn-outline" id="newBookingBtn">Make Another Reservation</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER / CONTACT ============ -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>🍽️ Savory Table</h3>
+        <p>Breakfast, lunch and dinner served fresh every day. We can't wait to welcome you.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li>Breakfast: 7:00 AM – 11:00 AM</li>
+          <li>Lunch: 11:30 AM – 3:00 PM</li>
+          <li>Dinner: 5:00 PM – 10:30 PM</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>📍 123 Flavor Street, Foodie City</li>
+          <li>📞 +1 (555) 123-4567</li>
+          <li>✉️ hello@savorytable.com</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reservation">Reserve a Table</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Savory Table. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
